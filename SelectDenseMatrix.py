@@ -26,10 +26,15 @@ print(len(mostUserNonZero))
 
 
 mostUserIndex = mostUserNonZero.index
+
 mostItemIndex = mostItemNonZero.index
 
+#Because here in dataset(ratingMatrix), user index and Item index was substract 1
 denseRatingMatrix = dataset.loc[mostUserIndex, mostItemIndex]
+#So after selecting the dataset, add the indexes by 1
+mostUserIndex = mostUserNonZero.index +1
 
+mostItemIndex = mostItemNonZero.index + 1
 
 np.savetxt('denseRatingMatrix.csv', denseRatingMatrix, delimiter = ',')
 np.savetxt('mostUserIndex.csv', mostUserIndex, delimiter = ',')

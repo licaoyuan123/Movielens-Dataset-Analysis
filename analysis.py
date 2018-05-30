@@ -10,3 +10,5 @@ userNonZero =  (dataset!=0).sum(1)
 itemNonZero = (dataset[:]!=0).sum()
 
 print(userNonZero.sum())
+
+print(itemNonZero.sum())
